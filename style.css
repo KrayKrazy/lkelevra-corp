@@ -1416,11 +1416,19 @@ ul {
     }
 
     .about__image img {
-        height: 400px;
+        height: 360px;
     }
 
     .services__grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .differentials__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .differential-card::after {
+        display: none;
     }
 
     .metrics__grid {
@@ -1429,6 +1437,14 @@ ul {
 
     .metric-card:nth-child(2)::after {
         display: none;
+    }
+
+    .plans__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card--featured {
+        transform: none;
     }
 
     .contact__grid {
@@ -1444,9 +1460,10 @@ ul {
 
 @media (max-width: 768px) {
     :root {
-        --section-padding: 64px;
+        --section-padding: 56px;
     }
 
+    /* ── NAV MOBILE ── */
     .header__nav {
         position: fixed;
         top: 0;
@@ -1490,14 +1507,47 @@ ul {
         display: flex;
     }
 
+    /* ── HERO ── */
     .hero__title {
-        font-size: clamp(2rem, 7vw, 3rem);
+        font-size: clamp(1.9rem, 8vw, 2.8rem);
     }
 
+    .hero__subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ── ABOUT ── */
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about__image img {
+        height: 300px;
+    }
+
+    .about__experience-badge {
+        left: auto;
+        right: 16px;
+        bottom: -16px;
+    }
+
+    /* ── SERVICES ── */
     .services__grid {
         grid-template-columns: 1fr;
     }
 
+    /* ── DIFERENCIAIS ── */
     .metrics__grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -1506,18 +1556,53 @@ ul {
         display: none;
     }
 
-    .testimonial-card {
-        padding: 32px 24px;
+    .differentials__grid {
+        grid-template-columns: 1fr 1fr !important;
     }
 
-    .testimonial-card__quote {
-        font-size: 1.05rem;
+    .differential-card::after {
+        display: none;
+    }
+
+    .differential-card__desc {
+        font-size: 0.8rem;
+        max-width: 100%;
+    }
+
+    /* ── PLANOS ── */
+    .plans__guarantee {
+        flex-direction: column;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .plans__selector-label {
+        font-size: 0.82rem;
+    }
+
+    .plans__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plan-card--featured {
+        transform: none;
+    }
+
+    .plan-card__cta {
+        margin: 0 20px 20px;
+    }
+
+    /* ── CONTACT ── */
+    .contact__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .contact__form {
-        padding: 32px 24px;
+        padding: 28px 20px;
     }
 
+    /* ── FOOTER ── */
     .footer__grid {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -1531,39 +1616,32 @@ ul {
 }
 
 @media (max-width: 480px) {
-    .hero__actions {
-        flex-direction: column;
+    :root {
+        --section-padding: 48px;
     }
 
-    .hero__actions .btn {
-        width: 100%;
-        justify-content: center;
+    /* ── DIFERENCIAIS ── */
+    .differentials__grid {
+        grid-template-columns: 1fr !important;
     }
 
+    .differential-card {
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 32px;
+    }
+
+    .differential-card:last-child {
+        border-bottom: none;
+    }
+
+    /* ── SECTION TITLES ── */
+    .section-title {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+    }
+
+    /* ── METRICS ── */
     .metrics__grid {
         grid-template-columns: 1fr;
-    }
-
-    .differentials__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .differential-card::after {
-        display: none;
-    }
-
-    .about__experience-badge {
-        left: auto;
-        right: 16px;
-        bottom: -16px;
-    }
-
-    .plans__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .plan-card--featured {
-        transform: none;
     }
 }
 
