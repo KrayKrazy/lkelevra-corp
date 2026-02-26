@@ -1440,11 +1440,11 @@ ul {
     }
 
     .plans__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .plan-card--featured {
-        transform: none;
+        transform: none !important;
     }
 
     .contact__grid {
@@ -1581,11 +1581,11 @@ ul {
     }
 
     .plans__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 
     .plan-card--featured {
-        transform: none;
+        transform: none !important;
     }
 
     .plan-card__cta {
