@@ -5,21 +5,21 @@
 
 /* ─── CUSTOM PROPERTIES ─── */
 :root {
-    --color-bg-primary: #1E1E1E;
-    --color-bg-secondary: #2A2A2A;
-    --color-bg-tertiary: #333333;
-    --color-bg-card: #2D2D2D;
-    --color-navy: #1B3A5C;
-    --color-navy-deep: #0F2540;
-    --color-gold: #C9A84C;
-    --color-gold-light: #D4B95F;
-    --color-gold-dark: #A88B3D;
+    --color-bg-primary: #050505;
+    --color-bg-secondary: #0A0A0A;
+    --color-bg-tertiary: #141414;
+    --color-bg-card: #111111;
+    --color-navy: #1C1105;
+    --color-navy-deep: #0D0700;
+    --color-gold: #b58039;
+    --color-gold-light: #d69947;
+    --color-gold-dark: #8c6027;
     --color-white: #FFFFFF;
-    --color-text-primary: #F0F0F0;
+    --color-text-primary: #F5F5F5;
     --color-text-secondary: #B0B0B0;
     --color-text-muted: #787878;
-    --color-border: rgba(255, 255, 255, 0.06);
-    --color-glass: rgba(42, 42, 42, 0.65);
+    --color-border: rgba(255, 255, 255, 0.05);
+    --color-glass: rgba(10, 10, 10, 0.65);
 
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, sans-serif;
@@ -403,7 +403,7 @@ ul {
     left: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(27, 58, 92, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(181, 128, 57, 0.15) 0%, transparent 70%);
     animation: pulse-glow 10s ease-in-out infinite 2s;
 }
 
