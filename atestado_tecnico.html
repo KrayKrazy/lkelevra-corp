@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atestado de Capacidade Técnica - Kelevra Corp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-gold: #b58039;
+            --color-gold-dark: #8c6027;
+            --color-black: #050505;
+            --color-gray: #555;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-black);
+            background-color: #fff;
+            line-height: 1.6;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 25mm 20mm;
+            margin: 10px auto;
+            position: relative;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            width: 80%;
+            height: auto;
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--color-gold);
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-logo {
+            height: 60px;
+        }
+
+        .header-info {
+            text-align: right;
+            font-size: 0.75rem;
+            color: var(--color-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 22pt;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--color-black);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+            border-left: 4px solid var(--color-gold);
+            padding-left: 10px;
+            color: var(--color-black);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 11pt;
+        }
+
+        .activities {
+            margin-bottom: 30px;
+        }
+
+        .activity-item {
+            margin-bottom: 20px;
+        }
+
+        .activity-header {
+            font-weight: 700;
+            color: var(--color-gold-dark);
+            margin-bottom: 10px;
+            font-size: 11pt;
+        }
+
+        .activity-list {
+            list-style: none;
+            padding-left: 15px;
+        }
+
+        .activity-list li {
+            position: relative;
+            margin-bottom: 8px;
+            font-size: 10.5pt;
+        }
+
+        .activity-list li::before {
+            content: "•";
+            color: var(--color-gold);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .footer-data {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 9pt;
+            color: var(--color-gray);
+            line-height: 1.5;
+        }
+
+        .signature-area {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .signature-line {
+            width: 250px;
+            border-top: 1px solid var(--color-black);
+            margin-bottom: 10px;
+        }
+
+        .signature-name {
+            font-weight: 700;
+            font-size: 11pt;
+        }
+
+        .signature-role {
+            font-size: 9pt;
+            color: var(--color-gray);
+        }
+
+        @media print {
+            body { background: none; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+            .no-print { display: none; }
+        }
+
+        .btn-print {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: var(--color-gold);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .btn-print:hover {
+            background: var(--color-gold-dark);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="btn-print no-print" onclick="window.print()">Imprimir PDF</button>
+
+    <div class="page">
+        <img src="papel timbrado.png" alt="Watermark" class="watermark">
+        
+        <header class="header">
+            <div class="header-info">
+                <strong>lKelevra Corp</strong><br>
+                Consultoria Comercial & Estratégica<br>
+                Brasília - DF
+            </div>
+            <img src="img/logo.png" alt="Kelevra Logo" class="header-logo">
+        </header>
+
+        <main class="content">
+            <h1>Atestado de Capacidade Técnica</h1>
+
+            <p><strong>OBJETO DO ATESTADO:</strong> Prestação de Serviços de Consultoria em Engenharia Comercial, Estruturação de Vendas e Capacitação de Equipe.</p>
+
+            <p><strong>DESCRIÇÃO DETALHADA DAS ATIVIDADES REALIZADAS:</strong></p>
+
+            <p>Atestamos, para os devidos fins de comprovação de capacidade técnica, que os serviços prestados contemplaram a reestruturação integral do nosso departamento de vendas, englobando planejamento estratégico, execução operacional e desenvolvimento humano, destacando-se as seguintes frentes de atuação:</p>
+
+            <div class="activities">
+                <div class="activity-item">
+                    <div class="activity-header">1. Auditoria e Engenharia Comercial:</div>
+                    <ul class="activity-list">
+                        <li>Mapeamento completo do fluxo de cadência e do processo de vendas atual do Espaço Floresta;</li>
+                        <li>Identificação de gargalos operacionais e reestruturação do funil de vendas, visando a otimização da jornada de compra do cliente e a redução do ciclo de vendas;</li>
+                        <li>Implantação de metodologias ágeis de atendimento e definição de Indicadores-Chave de Performance (KPIs) para a equipe comercial.</li>
+                    </ul>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-header">2. Treinamentos Semanais de Alta Performance:</div>
+                    <ul class="activity-list">
+                        <li>Condução de encontros semanais de capacitação técnica com o time de consultoras comerciais;</li>
+                        <li>Aplicação prática de metodologias avançadas de vendas B2B/B2C, incluindo técnicas de <em>SPIN Selling</em>, contorno de objeções, ancoragem de valor e fechamento de contratos;</li>
+                        <li>Realização de simulações de vendas (<em>Role-play</em>) para garantir a absorção da metodologia pela equipe e a padronização do discurso de vendas.</li>
+                    </ul>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-header">3. Acompanhamento Operacional e Monitoria (<em>Shadowing</em>):</div>
+                    <ul class="activity-list">
+                        <li>Monitoramento individual e diário das consultoras comerciais (lado a lado), avaliando a aplicação prática das técnicas de vendas no contato real com os <em>leads</em>;</li>
+                        <li>Análise de conversas, auditoria de contatos e correções de rota em tempo real, garantindo a aderência aos processos estabelecidos no CRM;</li>
+                        <li><em>Feedback</em> contínuo focado no aumento da taxa de conversão e na manutenção da qualidade do atendimento (SLA).</li>
+                    </ul>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-header">4. Gestão e Previsibilidade de Resultados:</div>
+                    <ul class="activity-list">
+                        <li>Estruturação de rotinas de prestação de contas (<em>Follow-up</em> de vendas);</li>
+                        <li>Auxílio na tomada de decisão estratégica baseada em análise de dados operacionais, proporcionando maior previsibilidade de caixa e escala nos fechamentos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>Declaramos, por fim, que todos os serviços foram executados com rigor técnico, excelência profissional e cumprimento integral dos prazos e metas estabelecidos, não havendo nada que desabone a conduta técnica ou comercial da contratada.</p>
+
+            <div class="footer-data">
+                <strong>Dados das empresas:</strong> Atestamos, a pedido da interessada e para fins de prova, que a empresa <strong>58.416.174 Solano Cardoso</strong>, inscrita no CNPJ sob o nº <strong>58.416.174/0001-10</strong>, estabelecida na Rua 10 Chácara 167 2 Apt 101 Vila Sao Jose (Vicente Pires) Brasília DF 72003-010, forneceu satisfatoriamente ao <strong>Espaço Floresta</strong>, inscrito no CNPJ sob o nº <strong>46.993.976/0001-03</strong>, os serviços constantes da relação acima, dentro dos prazos contratados.
+            </div>
+
+            <div class="signature-area">
+                <div class="signature-line"></div>
+                <div class="signature-name">Espaço Floresta</div>
+                <div class="signature-role">Contratante / Emissor do Atestado</div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
