@@ -5,21 +5,24 @@
 
 /* ─── CUSTOM PROPERTIES ─── */
 :root {
-    --color-bg-primary: #050505;
-    --color-bg-secondary: #0A0A0A;
-    --color-bg-tertiary: #141414;
-    --color-bg-card: #111111;
-    --color-navy: #1C1105;
-    --color-navy-deep: #0D0700;
-    --color-gold: #b58039;
-    --color-gold-light: #d69947;
-    --color-gold-dark: #8c6027;
-    --color-white: #FFFFFF;
-    --color-text-primary: #F5F5F5;
-    --color-text-secondary: #B0B0B0;
-    --color-text-muted: #787878;
+    --color-bg-primary: #050507;
+    --color-bg-secondary: #0a0b10;
+    --color-bg-tertiary: #111827;
+    --color-bg-card: #0f172a;
+    --color-navy: #1e293b;
+    --color-navy-deep: #0f172a;
+    --color-gold: #d97706;
+    --color-gold-light: #fbbf24;
+    --color-gold-dark: #b45309;
+    --color-white: #e2e8f0;
+    --color-text-primary: #e2e8f0;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #64748b;
     --color-border: rgba(255, 255, 255, 0.05);
-    --color-glass: rgba(10, 10, 10, 0.65);
+    --color-glass: rgba(10, 11, 16, 0.65);
+    
+    --accent-metallic: linear-gradient(135deg, #f8fafc 0%, #94a3b8 40%, #cbd5e1 60%, #64748b 100%);
+    --accent-gold: linear-gradient(135deg, #fbbf24 0%, #d97706 50%, #b45309 100%);
 
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', -apple-system, sans-serif;
@@ -90,6 +93,20 @@ ul {
 
 .text-gold {
     color: var(--color-gold);
+}
+
+.text-metallic {
+    background: var(--accent-metallic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gold-gradient {
+    background: var(--accent-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* ─── SECTION COMMONS ─── */
