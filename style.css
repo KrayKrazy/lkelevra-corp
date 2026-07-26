@@ -441,10 +441,8 @@ ul {
 .hero__overlay {
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(180deg, rgba(30, 30, 30, 0.4) 0%, rgba(30, 30, 30, 0.1) 40%, rgba(30, 30, 30, 0.6) 100%),
-        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80') center/cover no-repeat;
-    opacity: 0.25;
+    background: linear-gradient(180deg, var(--color-bg-primary) 0%, rgba(15, 23, 42, 0.95) 50%, var(--color-bg-primary) 100%);
+    z-index: 1;
 }
 
 .hero__particles {
