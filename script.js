@@ -228,10 +228,23 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('company').value;
+            const serviceSelect = document.getElementById('service');
+            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+
+            const text = `Olá, vim pelo site da Kelevra Corp!\n\n*Nome:* ${name}\n*Empresa:* ${company}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n*Pilar de interesse:* ${serviceText}`;
+            const whatsappNumber = "5561981849873";
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+            window.open(whatsappUrl, '_blank');
+
             const btn = contactForm.querySelector('.btn');
             const originalContent = btn.innerHTML;
 
-            btn.innerHTML = '<span>Enviado com sucesso!</span> ✓';
+            btn.innerHTML = '<span>Redirecionando...</span> ⏳';
             btn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
             btn.disabled = true;
 
