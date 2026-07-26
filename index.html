@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/logo.png">
     <link rel="apple-touch-icon" href="img/logo.png">
@@ -120,131 +121,163 @@
                 <p class="section-subtitle animate-on-scroll">A infraestrutura comercial de alto padrão que domina Santo Antônio do Descoberto e região.</p>
             </div>
 
-            <div class="services__grid--2cols">
+            <div class="swiper ecossistema-swiper animate-on-scroll">
+                <div class="swiper-wrapper">
 
-                <!-- Pilar 1: GMN -->
-                <div class="service-card animate-on-scroll" style="display: flex; flex-direction: column;">
-                    <div class="service-card__number">01</div>
-                    <div class="service-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0 Z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25s-7.5-4.108-7.5-11.25a7.5 7.5 0 1 1 15 0 Z" />
-                        </svg>
+                    <!-- Pilar 1: GMN -->
+                    <div class="swiper-slide">
+                        <div class="service-card" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="service-card__image">
+                                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=600&h=400&fit=crop&q=80" alt="Dominância Local">
+                            </div>
+                            <div class="service-card__number">01</div>
+                            <div class="service-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0 Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25s-7.5-4.108-7.5-11.25a7.5 7.5 0 1 1 15 0 Z" />
+                                </svg>
+                            </div>
+                            <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Dominância Local (GMN)</h3>
+                            <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Ser a única escolha da região</div>
+
+                            <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
+                                <li style="margin-bottom: 14px; font-size: 0.85rem; color: var(--color-text-muted);">
+                                    <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Setup de Alta Conversão</strong>
+                                    Sua empresa não existe se não está no mapa. Construímos o seu ativo digital do absoluto zero no Google, aplicando engenharia de palavras-chave locais.
+                                </li>
+                                <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
+                                    <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Recuperação e Dominância</strong>
+                                    Nossa auditoria diagnostica os gargalos da sua ficha, corrige punições e aplica SEO Local para empurrar seu negócio ao top 3.
+                                </li>
+                            </ul>
+
+                            <div style="flex-grow: 1;"></div>
+                            <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20dominar%20o%20Google%20Meu%20Negócio%20em%20Santo%20Antônio%20do%20Descoberto." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Mapear Minha Região</a>
+                        </div>
                     </div>
-                    <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Dominância Local (GMN)</h3>
-                    <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Ser a única escolha lógica da região</div>
 
-                    <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
-                        <li style="margin-bottom: 14px; font-size: 0.85rem; color: var(--color-text-muted);">
-                            <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Setup de Alta Conversão</strong>
-                            Sua empresa não existe se não está no mapa. Construímos o seu ativo digital do absoluto zero no Google, aplicando engenharia de palavras-chave locais para que o seu negócio seja encontrado pelos clientes exatos do seu bairro.
-                        </li>
-                        <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
-                            <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Recuperação e Dominância</strong>
-                            Você está perdendo vendas todos os dias para concorrentes piores. Nossa auditoria diagnostica os gargalos da sua ficha, corrige punições e aplica SEO Local para empurrar seu negócio ao top 3.
-                        </li>
-                    </ul>
+                    <!-- Pilar 2: iFood -->
+                    <div class="swiper-slide">
+                        <div class="service-card" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="service-card__image">
+                                <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?w=600&h=400&fit=crop&q=80" alt="Engenharia de Delivery">
+                            </div>
+                            <div class="service-card__number">02</div>
+                            <div class="service-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5" />
+                                </svg>
+                            </div>
+                            <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Engenharia de Delivery (iFood)</h3>
+                            <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Sair da guerra de preços</div>
 
-                    <div style="flex-grow: 1;"></div>
-                    <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20dominar%20o%20Google%20Meu%20Negócio%20em%20Santo%20Antônio%20do%20Descoberto." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Mapear Minha Região</a>
+                            <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
+                                <li style="margin-bottom: 14px; font-size: 0.85rem; color: var(--color-text-muted);">
+                                    <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Lançamento Estratégico</strong>
+                                    Não basta abrir o aplicativo. Estruturamos a sua loja no iFood do zero com categorização inteligente, fotos que geram desejo e descrições persuasivas.
+                                </li>
+                                <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
+                                    <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Alavancagem de Cardápio</strong>
+                                    Re-desenhamos a arquitetura do cardápio com engenharia de preços, combos lucrativos e cross-sell para aumentar o ticket médio e fechar pedidos.
+                                </li>
+                            </ul>
+
+                            <div style="flex-grow: 1;"></div>
+                            <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20alavancar%20minha%20loja%20no%20iFood." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Alavancar Meu Delivery</a>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 3: Tráfego -->
+                    <div class="swiper-slide">
+                        <div class="service-card" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="service-card__image">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80" alt="Tráfego">
+                            </div>
+                            <div class="service-card__number">03</div>
+                            <div class="service-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Aquisição Ativa (Tráfego)</h3>
+                            <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Previsibilidade de Caixa</div>
+
+                            <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
+                                <li style="margin-bottom: 14px; font-size: 0.85rem; color: var(--color-text-muted);">
+                                    <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Injeção de Caixa Imediata</strong>
+                                    Compramos os clientes certos para você. Criamos campanhas cirúrgicas no Google e Meta Ads, exibindo sua oferta apenas para quem tem intenção de compra.
+                                </li>
+                                <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
+                                    <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Aceleração Local</strong>
+                                    Campanhas de tráfego de guerrilha hiper-localizadas num raio curto ao redor da sua empresa. Colocamos sua oferta na tela do cliente.
+                                </li>
+                            </ul>
+
+                            <div style="flex-grow: 1;"></div>
+                            <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20criar%20campanhas%20de%20tráfego%20para%20meu%20negócio." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Iniciar Campanhas</a>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 4: Branding -->
+                    <div class="swiper-slide">
+                        <div class="service-card" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="service-card__image">
+                                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop&q=80" alt="Branding">
+                            </div>
+                            <div class="service-card__number">04</div>
+                            <div class="service-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Percepção de Valor (Branding)</h3>
+                            <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Blindagem contra preço</div>
+
+                            <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
+                                <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
+                                    <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Design de Autoridade</strong>
+                                    O cliente julga a qualidade do seu serviço nos primeiros 3 segundos. Criamos uma identidade visual premium que transmite confiança e justifica cobrar mais caro. Torne-se a referência definitiva.
+                                </li>
+                            </ul>
+
+                            <div style="flex-grow: 1;"></div>
+                            <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20construir%20uma%20identidade%20visual%20premium." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Elevar Minha Marca</a>
+                        </div>
+                    </div>
+
+                    <!-- Pilar 5: Engenharia Comercial -->
+                    <div class="swiper-slide">
+                        <div class="service-card" style="display: flex; flex-direction: column; height: 100%;">
+                            <div class="service-card__image">
+                                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&h=400&fit=crop&q=80" alt="Engenharia Comercial">
+                            </div>
+                            <div class="service-card__number">05</div>
+                            <div class="service-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Engenharia Comercial</h3>
+                            <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Atendentes em Closers</div>
+
+                            <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
+                                <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
+                                    <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Esquadrão de Vendas</strong>
+                                    Ter leads não adianta se o time queima a venda. Implementamos processos de alta conversão (SPIN Selling, BANT, AIDA) e análise comportamental (DISC). Escale sua taxa de conversão.
+                                </li>
+                            </ul>
+
+                            <div style="flex-grow: 1;"></div>
+                            <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20estruturar%20meu%20time%20comercial." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Estruturar Meu Time</a>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Pilar 2: iFood -->
-                <div class="service-card animate-on-scroll" style="display: flex; flex-direction: column;">
-                    <div class="service-card__number">02</div>
-                    <div class="service-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5" />
-                        </svg>
-                    </div>
-                    <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Engenharia de Delivery (iFood)</h3>
-                    <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Sair da guerra de preços e liderar os pedidos</div>
-
-                    <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
-                        <li style="margin-bottom: 14px; font-size: 0.85rem; color: var(--color-text-muted);">
-                            <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Lançamento Estratégico</strong>
-                            Não basta abrir o aplicativo — é preciso jogar o jogo do algoritmo. Estruturamos a sua loja no iFood do zero com categorização inteligente, fotos que geram desejo e descrições persuasivas que dão fome.
-                        </li>
-                        <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
-                            <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Alavancagem de Cardápio</strong>
-                            Sua loja tem visitas, mas não vende? Re-desenhamos a arquitetura do cardápio com engenharia de preços, combos lucrativos e cross-sell para aumentar o ticket médio.
-                        </li>
-                    </ul>
-
-                    <div style="flex-grow: 1;"></div>
-                    <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20alavancar%20minha%20loja%20no%20iFood." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Alavancar Meu Delivery</a>
-                </div>
-
-                <!-- Pilar 3: Tráfego -->
-                <div class="service-card animate-on-scroll" style="display: flex; flex-direction: column;">
-                    <div class="service-card__number">03</div>
-                    <div class="service-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Aquisição Ativa (Tráfego)</h3>
-                    <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Previsibilidade e fim do boca a boca</div>
-
-                    <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
-                        <li style="margin-bottom: 14px; font-size: 0.85rem; color: var(--color-text-muted);">
-                            <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Injeção de Caixa Imediata</strong>
-                            Compramos os clientes certos para você. Criamos campanhas cirúrgicas no Google e Meta Ads, exibindo sua oferta apenas para quem mora em Santo Antônio do Descoberto e já tem intenção de compra.
-                        </li>
-                        <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
-                            <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Aceleração de Negócios Físicos</strong>
-                            Campanhas de tráfego de guerrilha hiper-localizadas num raio curto ao redor da sua empresa. Fim das mesas vazias e estoque parado.
-                        </li>
-                    </ul>
-
-                    <div style="flex-grow: 1;"></div>
-                    <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20criar%20campanhas%20de%20tráfego%20para%20meu%20negócio." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Iniciar Campanhas</a>
-                </div>
-
-                <!-- Pilar 4: Branding -->
-                <div class="service-card animate-on-scroll" style="display: flex; flex-direction: column;">
-                    <div class="service-card__number">04</div>
-                    <div class="service-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                    </div>
-                    <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Percepção de Valor (Branding)</h3>
-                    <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Confiança absoluta e blindagem contra preço</div>
-
-                    <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
-                        <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
-                            <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Design de Autoridade</strong>
-                            O cliente de Santo Antônio do Descoberto julga a qualidade do seu serviço nos primeiros 3 segundos. Criamos uma identidade visual premium que transmite confiança, profissionalismo e justifica cobrar mais caro. Torne-se a referência definitiva do seu mercado.
-                        </li>
-                    </ul>
-
-                    <div style="flex-grow: 1;"></div>
-                    <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20construir%20uma%20identidade%20visual%20premium." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Elevar Minha Marca</a>
-                </div>
-
-                <!-- Pilar 5: Engenharia Comercial -->
-                <div class="service-card animate-on-scroll" style="display: flex; flex-direction: column; grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
-                    <div class="service-card__number">05</div>
-                    <div class="service-card__icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="service-card__title" style="margin-bottom: 8px;">◆ Engenharia Comercial</h3>
-                    <div style="font-size: 0.8rem; font-weight: 600; color: var(--color-gold); margin-bottom: 16px;">Foco: Transformar atendentes em closers de alta performance</div>
-
-                    <ul class="service-card__bullets" style="margin-top: 0; padding-left: 0; list-style: none;">
-                        <li style="margin-bottom: 0; font-size: 0.85rem; color: var(--color-text-muted);">
-                            <strong style="color: var(--color-text); display: block; margin-bottom: 4px;">Esquadrão de Vendas</strong>
-                            Ter leads não adianta se o time queima a venda. Entregamos a mais avançada consultoria de vendas de Santo Antônio do Descoberto. Implementamos processos de alta conversão (SPIN Selling, BANT, AIDA) e análise comportamental (DISC). Escale sua taxa de conversão e domine o Entorno.
-                        </li>
-                    </ul>
-
-                    <div style="flex-grow: 1;"></div>
-                    <a href="https://wa.me/5561981849873?text=Olá!%20Quero%20estruturar%20meu%20time%20comercial." target="_blank" class="btn btn--outline" style="margin-top: 24px; padding: 10px 16px; font-size: 0.85rem; text-align: center;">Estruturar Meu Time</a>
-                </div>
-
+                <!-- Swiper Controls -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
     </section>
@@ -456,6 +489,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
