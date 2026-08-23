@@ -179,27 +179,140 @@ document.addEventListener('DOMContentLoaded', () => {
         resetAutoSlide();
     }
 
-    /* ─── HERO PARTICLES (particles.js) ─── */
-    const particlesContainer = document.getElementById('particles');
-    if (particlesContainer && typeof particlesJS !== 'undefined') {
-        particlesJS("particles", {
-            "particles": {
-                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#d4af37" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.4, "random": false },
-                "size": { "value": 2, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#d4af37", "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } }, "push": { "particles_nb": 3 } }
-            },
-            "retina_detect": true
+    /* ─── HERO CONSTELLATION — Custom Canvas (stars + lines + mouse parallax) ─── */
+    (function initConstellation() {
+        const heroSection = document.getElementById('inicio');
+        if (!heroSection) return;
+
+        const canvas = document.createElement('canvas');
+        canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;';
+        heroSection.style.position = 'relative';
+        heroSection.insertBefore(canvas, heroSection.firstChild);
+
+        const ctx = canvas.getContext('2d');
+        let W, H, stars;
+        const mouse = { x: 0, y: 0 };
+        const STAR_COUNT = 75;
+        const CONNECTION_DIST = 140;
+
+        function resize() {
+            W = canvas.offsetWidth;
+            H = canvas.offsetHeight;
+            canvas.width = W;
+            canvas.height = H;
+        }
+
+        function createStars() {
+            stars = Array.from({ length: STAR_COUNT }, () => {
+                const bx = Math.random() * W;
+                const by = Math.random() * H;
+                return {
+                    bx, by, x: bx, y: by,
+                    r: Math.random() * 1.4 + 0.4,
+                    phase: Math.random() * Math.PI * 2,
+                    speed: Math.random() * 0.25 + 0.08,
+                    ampX: Math.random() * 20 + 8,
+                    ampY: Math.random() * 14 + 5,
+                };
+            });
+        }
+
+        let t = 0;
+        function draw() {
+            t += 0.005;
+            ctx.clearRect(0, 0, W, H);
+
+            const mx = mouse.x || W / 2;
+            const my = mouse.y || H / 2;
+            const px = (mx - W / 2) * 0.018;
+            const py = (my - H / 2) * 0.018;
+
+            stars.forEach(s => {
+                s.x = s.bx + Math.sin(t * s.speed + s.phase) * s.ampX + px;
+                s.y = s.by + Math.cos(t * s.speed * 0.7 + s.phase) * s.ampY + py;
+                if (s.x < 0) { s.x += W; s.bx += W; }
+                if (s.x > W) { s.x -= W; s.bx -= W; }
+                if (s.y < 0) { s.y += H; s.by += H; }
+                if (s.y > H) { s.y -= H; s.by -= H; }
+            });
+
+            for (let i = 0; i < stars.length; i++) {
+                for (let j = i + 1; j < stars.length; j++) {
+                    const dx = stars[i].x - stars[j].x;
+                    const dy = stars[i].y - stars[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < CONNECTION_DIST) {
+                        const a = (1 - dist / CONNECTION_DIST) * 0.22;
+                        ctx.beginPath();
+                        ctx.moveTo(stars[i].x, stars[i].y);
+                        ctx.lineTo(stars[j].x, stars[j].y);
+                        ctx.strokeStyle = `rgba(212,175,55,${a})`;
+                        ctx.lineWidth = 0.6;
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            stars.forEach(s => {
+                const pulse = 0.65 + 0.35 * Math.sin(t * 2.2 + s.phase);
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r * pulse, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(212,175,55,${0.45 + 0.55 * pulse})`;
+                ctx.fill();
+            });
+
+            requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('mousemove', e => {
+            const rect = heroSection.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
         });
-    }
+        window.addEventListener('resize', () => { resize(); createStars(); });
+
+        resize();
+        createStars();
+        draw();
+    })();
+
+    /* ─── LUXURY CURSOR (desktop only) ─── */
+    (function initCursor() {
+        if (window.innerWidth < 768) return;
+
+        document.body.style.cursor = 'none';
+
+        const dot = document.createElement('div');
+        dot.style.cssText = 'position:fixed;top:0;left:0;width:14px;height:14px;border-radius:50%;background:#d4af37;pointer-events:none;z-index:99999;will-change:transform;mix-blend-mode:difference;';
+
+        const ring = document.createElement('div');
+        ring.style.cssText = 'position:fixed;top:0;left:0;width:38px;height:38px;border-radius:50%;border:1px solid rgba(212,175,55,0.55);pointer-events:none;z-index:99998;will-change:transform;transition:border-color 0.2s;';
+
+        document.body.appendChild(dot);
+        document.body.appendChild(ring);
+
+        const pos = { x: -100, y: -100 };
+        const trail = { x: -100, y: -100 };
+        let isHover = false;
+
+        window.addEventListener('mousemove', e => { pos.x = e.clientX; pos.y = e.clientY; });
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.style.cursor = 'none';
+            el.addEventListener('mouseenter', () => { isHover = true; ring.style.borderColor = 'rgba(212,175,55,0.9)'; });
+            el.addEventListener('mouseleave', () => { isHover = false; ring.style.borderColor = 'rgba(212,175,55,0.55)'; });
+        });
+
+        (function animateCursor() {
+            trail.x += (pos.x - trail.x) * 0.12;
+            trail.y += (pos.y - trail.y) * 0.12;
+            const s = isHover ? 2.2 : 1;
+            const rs = isHover ? 1.5 : 1;
+            dot.style.transform = `translate(${pos.x - 7}px,${pos.y - 7}px) scale(${s})`;
+            ring.style.transform = `translate(${trail.x - 19}px,${trail.y - 19}px) scale(${rs})`;
+            requestAnimationFrame(animateCursor);
+        })();
+    })();
 
     /* ─── SMOOTH SCROLL for anchor links ─── */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
